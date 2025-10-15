@@ -58,6 +58,9 @@ directory you are running the dev server from called 'transactions.db' which con
 is stored on disk instead of memory without dealing with a full database management system. This choice would allow you to easily upgrade the
 database capabilities without needing the change the API layer/ main.py script.
 
+I used the pydantic library for extra automatic data validation, defining API response models within the models.py file which were imported into the
+main.py and storage.py scripts.
+
 Performance:
 
 The API service can complete (On my machine) a 1 million row csv upload in about 60 seconds on average and query time is fast enough to not be noticeable,
