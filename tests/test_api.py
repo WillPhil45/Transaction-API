@@ -13,10 +13,10 @@ def test_running():
 def test_valid_upload():
     # Test a valid file upload 
     csv_content = """transaction_id,user_id,product_id,timestamp,transaction_amount
-T001,42,100,2024-01-01 10:00:00,99.99
-T002,42,101,2024-01-02 11:00:00,150.50
-T003,43,102,2024-01-03 12:00:00,200.00
-"""
+    T001,42,100,2024-01-01 10:00:00,99.99
+    T002,42,101,2024-01-02 11:00:00,150.50
+    T003,43,102,2024-01-03 12:00:00,200.00
+    """
     files = {'file': ('test.csv', io.BytesIO(csv_content.encode()), 'text/csv')}
     response = client.post("/upload", files=files)
     
